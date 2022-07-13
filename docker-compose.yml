@@ -1,0 +1,10 @@
+version: "3.5"
+services:
+  node:
+    image: node:16.13.1-alpine
+    volumes:
+      - ./:/workspace/app
+    working_dir: /workspace/app
+    command: sh -c "cd frontend && yarn dev"
+    ports:
+      - "3040:3000"
